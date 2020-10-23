@@ -22,38 +22,37 @@ inputs.forEach((input) => {
 // Result Validation
 let nama = 'ItsA_Name';
 const proses = ()=>{
+  // Mengambil data dari inputan user
   let name = document.getElementById('name').value;
   let major = document.getElementById('major').value;
   let email = document.getElementById('email').value;
   let comment = document.getElementById('comment').value;
   comment = comment.toLowerCase();
-            
-  document.getElementById('res-name').innerHTML = name;
-  document.getElementById('res-major').innerHTML = major;
-  document.getElementById('res-email').innerHTML = email;
-  document.getElementById('res-comment').innerHTML = comment;
-            
+  
+  // Deklarasi variabel untuk menghitung banyaknya kata serta kata-kata terlarang
   let jumlahKata = comment.split(/\s/).length;
   let arrKata = comment.split(/\s/);
-  console.log(jumlahKata);
 
-
-
-  // Filter Cantik Kata-Kotor
-  // Filter Cantik Kata-Kotor
-  // Filter Cantik Kata-Kotor
   var badWords = ["kehed", "caduk", "beungeut", "belis", "halig", 
                   "siah", "belegug", "gebloh", "koplok", "anying",
                   "bebel", "eusleum", "bagoy", "edan", "kanjut", "henceut"];
 
-  let foundBadWords = arrKata.filter(etc => badWords.includes(etc));
-  document.getElementById("wordsFound").innerHTML = foundBadWords.join(", ");
-  document.getElementById("wordsAmount").innerHTML = foundBadWords.length;
+  let foundBadWords = arrKata.filter(etc => badWords.includes(etc)).join(", ");
 
-  // let patt = /anjing/i;
-  // if(comment.match(patt)){
-  //   console.log('ada kata kasar');
-  // }else{
-  //   console.log('ga ada kata kasar');
-  // }
+  // Menampilkan nama dan major
+  document.getElementById('welcome').innerHTML = `Halo ${name} dari ${major}. Terima kasih sudah mengisi form komentar ini`
+
+  // Menampilkan email yang dimasukkan
+  document.getElementById('email-validation').innerHTML = `Alamat email yang anda isikan ${email}. Mohon periksa kembali`
+
+  // Menampilkan banyaknya kata dalam komentar
+  document.getElementById('comment-validation').innerHTML = `Jumlah kata dalam komentar anda sebanyak ${jumlahKata}. `
+
+  // Cek kata terlarang. Bila ada kata terlarang, hitung dan tampilkan
+  if (foundBadWords.length > 0) {
+    document.getElementById('comment-validation').innerHTML = `Jumlah kata dalam komentar anda sebanyak ${jumlahKata}. Maaf, terdapat kata-kata yang tidak diperbolehkan seperti ${foundBadWords}. Mohon diganti.`
+  } else {
+    document.getElementById('comment-validation').innerHTML = `Jumlah kata dalam komentar anda sebanyak ${jumlahKata}. Terima kasih telah berkomentar dengan baik dan sopan. Semoga hari anda menyenangkan`
+  }
 }
+
