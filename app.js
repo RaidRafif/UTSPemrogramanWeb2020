@@ -35,9 +35,12 @@ const proses = ()=>{
 
   var badWords = ["kehed", "caduk", "beungeut", "belis", "halig", 
                   "siah", "belegug", "gebloh", "koplok", "anying",
-                  "bebel", "eusleum", "bagoy", "edan", "kanjut", "henceut"];
+                  "bebel", "eusleum", "bagoy", "edan", "kanjut", 
+                  "henceut", "ampas", "bangsat", "sialan", "asu"];
 
-  let foundBadWords = arrKata.filter(etc => badWords.includes(etc)).join(", ");
+  let foundBadWords = arrKata.filter(etc => badWords.includes(etc));
+  let theBadWords = foundBadWords.join(", ");
+  let countBadWords = foundBadWords.length;
 
   // Menampilkan nama dan major
   document.getElementById('welcome').innerHTML = `Halo ${name} dari ${major}. Terima kasih sudah mengisi form komentar`
@@ -50,7 +53,7 @@ const proses = ()=>{
 
   // Cek kata terlarang. Bila ada kata terlarang, hitung dan tampilkan
   if (foundBadWords.length > 0) {
-    document.getElementById('comment-validation').innerHTML = `Jumlah kata dalam komentar anda sebanyak ${jumlahKata}. Maaf, terdapat kata-kata yang tidak diperbolehkan seperti ${foundBadWords}. Mohon diganti.`
+    document.getElementById('comment-validation').innerHTML = `Jumlah kata dalam komentar anda sebanyak ${jumlahKata}. Maaf, terdapat ${countBadWords} kata yang tidak diperbolehkan seperti ${theBadWords}. Mohon diganti.`
   } else {
     document.getElementById('comment-validation').innerHTML = `Jumlah kata dalam komentar anda sebanyak ${jumlahKata}. Terima kasih telah berkomentar dengan baik dan sopan. Semoga hari anda menyenangkan`
   }
