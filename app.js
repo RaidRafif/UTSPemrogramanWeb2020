@@ -40,7 +40,7 @@ const proses = ()=>{
   let foundBadWords = arrKata.filter(etc => badWords.includes(etc)).join(", ");
 
   // Menampilkan nama dan major
-  document.getElementById('welcome').innerHTML = `Halo ${name} dari ${major}. Terima kasih sudah mengisi form komentar ini`
+  document.getElementById('welcome').innerHTML = `Halo ${name} dari ${major}. Terima kasih sudah mengisi form komentar`
 
   // Menampilkan email yang dimasukkan
   document.getElementById('email-validation').innerHTML = `Alamat email yang anda isikan ${email}. Mohon periksa kembali`

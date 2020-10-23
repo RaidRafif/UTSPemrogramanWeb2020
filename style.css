@@ -41,13 +41,13 @@ textarea {
 /* BEGINNING OF CONTACT FROM BEGINNING OF CONTACT FROM BEGINNING OF CONTACT FROM  */
 
 .contact-form {
-	background-color: #1abc9c;
+	background-color: #bc3a1a;
 	position: relative;
 }
 
 .circle {
 	border-radius: 50%;
-	background: linear-gradient(135deg, transparent 20%, #149279);
+	background: linear-gradient(135deg, transparent 20%, #922d14);
 	position: absolute;
 }
 
@@ -55,14 +55,14 @@ textarea {
 	width: 130px;
 	height: 130px;
 	top: 130px;
-	right: -40px;
+	right: -20px;
 }
 
 .circle.two {
 	width: 80px;
 	height: 80px;
 	top: 10px;
-	right: 30px;
+	right: 50px;
 }
 
 .contact-form:before {
@@ -70,7 +70,7 @@ textarea {
 	position: absolute;
 	width: 26px;
 	height: 26px;
-	background-color: #1abc9c;
+	background-color: #bc3a1a;
 	transform: rotate(45deg);
 	bottom: 50px;
 	right: -13px;
@@ -146,7 +146,7 @@ textarea.input {
 	background-color: #fff;
 	border: 2px solid #fafafa;
 	font-size: 0.95rem;
-	color: #1abc9c;
+	color: #bc3a1a;
 	line-height: 1;
 	border-radius: 25px;
 	outline: none;
@@ -180,7 +180,7 @@ textarea.input {
 	opacity: 0;
 	transition: 0.3s;
 	height: 5px;
-	background-color: #1abc9c;
+	background-color: #bc3a1a;
 	top: 50%;
 	transform: translateY(-50%);
 }
@@ -216,7 +216,7 @@ textarea.input {
 }
 
 .contact-info .title {
-	color: #1abc9c;
+	color: #bc3a1a;
 }
 
 .contact-info:before {
@@ -224,7 +224,7 @@ textarea.input {
 	position: absolute;
 	width: 110px;
 	height: 100px;
-	border: 22px solid #1abc9c;
+	border: 22px solid #bc3a1a;
 	border-radius: 50%;
 	bottom: -77px;
 	right: 50px;
@@ -236,9 +236,9 @@ textarea.input {
 	width: 500px;
 	height: 500px;
 	border-radius: 50%;
-	background: linear-gradient(to bottom, #1cd4af, #159b80);
-	bottom: 50%;
-	right: 50%;
+	background: linear-gradient(to bottom, #d4411c, #9b3015);
+	bottom: 52%;
+	right: 52%;
 	transform: translate(-40%, 38%);
 }
 
@@ -251,6 +251,28 @@ textarea.input {
 	border-radius: 50%;
 	top: calc(50% - 180px);
 	left: calc(50% - 180px);
+}
+
+.huge-circle {
+	position: absolute;
+	width: 500px;
+	height: 500px;
+	border-radius: 50%;
+	background: linear-gradient(to right, #d4411c, #9b3015);
+	bottom: 20%;
+	right: 20%;
+	transform: translate(80%, 80%);
+}
+
+.huge-circle:after {
+	content: '';
+	position: absolute;
+	width: 380px;
+	height: 380px;
+	background-color: #fafafa;
+	border-radius: 50%;
+	top: calc(20% - 32px);
+	left: calc(20% - 38px);
 }
 
 .square {
