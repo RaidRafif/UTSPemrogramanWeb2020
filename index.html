@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UTS Pemrograman Web 2020</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+
+    <header>
+      <div style="float: right; margin-right: 20px; margin-top: 10px;">
+        <p>Ujian Tengah Semester</p>
+        <div style="text-indent: 25px;">
+          <p> Nama  : Ra'id Rafif </p>
+          <p> NIM   : 442485 </p>
+        </div>
+      </div>
+    </header>
+
+    <section>
+
+      <div class="container">
+
+        <span class="big-circle"></span>
+        <img src="img/shape.png" class="square" alt="" />
+  
+        <div class="form">
+  
+          <div class="contact-form">
+  
+            <span class="circle one"></span>
+            <span class="circle two"></span>
+  
+            <form action="" autocomplete="off">
+  
+              <h3 class="title">Data Diri</h3>
+              
+              <div class="input-container">
+                <select name="major" id="major" class="input">
+                  <option disabled selected class="select">Pilih Major</option>
+                  <option value="Kimia" class="select">Kimia</option>
+                  <option value="Fisika" class="select">Fisika</option>
+                  <option value="Geofisika" class="select">Geofisika</option>
+                  <option value="Matematika" class="select">Matematika</option>
+                  <option value="Statistika" class="select">Statistika</option>
+                  <option value="Ilmu Komputer" class="select">Ilmu Komputer</option>
+                  <option value="Elektronika dan Instrumentasi" class="select">Elektronika dan Instrumentasi</option>
+                  <option value="aktuaria" class="select">Aktuaria</option>
+                </select>
+              </div>
+  
+              <div class="input-container">
+                <input type="text" name="name" id="name" class="input" />
+                <label for="">Nama</label>
+                <span>Nama</span>
+              </div>
+  
+              <div class="input-container">
+                <input type="email" name="email" id="email" class="input" />
+                <label for="">Email</label>
+                <span>Email</span>
+              </div>
+              
+  
+              <div class="input-container textarea">
+                <textarea name="comment" id="comment" class="input"></textarea>
+                <label for="">Komentar</label>
+                <span>Komentar</span>
+              </div>
+  
+              <!-- 
+              <input type="submit" value="Process" class="btn" onclick="proses()"/>
+              <input type="reset" value="Reset" class="btn" /> 
+              -->
+  
+              <button type="button" class="btn" onclick="proses()" >Proses</button>
+              <button type="reset" class="btn">Reset</button>
+  
+            </form>
+  
+          </div>
+  
+          <div class="contact-info">
+  
+            <h3 class="title">Result</h3>
+  
+            <div class="result-wrapper">
+              <div class="" id="res-name"></div>
+              <div class="" id="res-major"></div>
+              <div class="" id="res-email"></div>
+              <div class="" id="res-comment"></div>
+
+              <div class="" id="wordsFound"></div>
+              <div class="" id="wordsAmount"></div>
+            </div>
+  
+          </div>
+  
+        </div>
+  
+      </div>
+  
+      <script src="app.js"></script>
+
+    </section>
+
+    <footer style="background-color: #149279;">
+				<div style="padding: 0.8rem; text-align: center;">
+					<p>UTS Pemrograman Web 2020</p>
+        </div>
+		</footer>
+    
+  </body>
+</html>
